@@ -7,6 +7,8 @@ The console is the first segment of the AirBnB project at Holberton School that 
 * Do operations on objects (count, compute stats, etc...)
 * Update attributes of an object
 * Destroy an object
+* Create endpoints
+* Use flask and APIs to make it work
 
 ## Table of Content
 * [Environment](#environment)
