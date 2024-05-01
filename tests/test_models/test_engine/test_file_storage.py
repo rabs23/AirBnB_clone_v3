@@ -113,6 +113,8 @@ class TestFileStorage(unittest.TestCase):
         with open("file.json", "r") as f:
             js = f.read()
         self.assertEqual(json.loads(string), json.loads(js))
+
+
 class TestFileStorage(unittest.TestCase):
     """Test the FileStorage class"""
 
@@ -139,14 +141,16 @@ class TestFileStorage(unittest.TestCase):
         obj = BaseModel()
         self.storage.new(obj)
         self.storage.save()
-        self.assertEqual(self.storage.all(BaseModel), {"BaseModel." + obj.id: obj})
+        self.assertEqual(self.storage.all(BaseModel),
+                         {"BaseModel." + obj.id: obj})
 
     def test_new(self):
         """Test the new method"""
         # Test that new adds an object to __objects
         obj = BaseModel()
         self.storage.new(obj)
-        self.assertIn("BaseModel." + obj.id, self.storage._FileStorage__objects)
+        self.assertIn("BaseModel." + obj.id,
+                      self.storage._FileStorage__objects)
 
     def test_save(self):
         """Test the save method"""
