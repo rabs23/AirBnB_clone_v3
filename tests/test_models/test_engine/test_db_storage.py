@@ -87,6 +87,7 @@ class TestFileStorage(unittest.TestCase):
     def test_save(self):
         """Test that save properly saves objects to file.json"""
 
+
 class TestDBStorage(unittest.TestCase):
     """Test the DBStorage class"""
     @unittest.skipIf(models.storage_t != 'db', "not testing db storage")
@@ -165,7 +166,7 @@ class TestDBStorage(unittest.TestCase):
 
     @unittest.skipIf(models.storage_t != 'db', "not testing db storage")
     def test_count(self):
-        """Test that count properly counts the number of objects in the database"""
+        """Test that  properly counts the number of objects in the database"""
         storage = DBStorage()
         state = State(name="California")
         state.save()
